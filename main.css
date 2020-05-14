@@ -1,9 +1,8 @@
-  
 html, body {
   margin: 0;
   padding: 0;
   font-size: 100%;
-  line-height: 1.5;
+  line-height: 1.2;
 }
 
 body {
@@ -12,22 +11,136 @@ body {
   background: url('assets/freedom.jpg') no-repeat center;
   background-size: cover;
   color: #333;
+  position: relative;
 }
 
+/* NAVBAR*/
+.topnav {
+  overflow: hidden;
+  background-color: rgba(92, 92, 92, 0);
+  position: relative;
+}
+
+.topnav #myLinks {
+  display: none;
+}
+
+.topnav a {
+  color: #333;
+  padding: 0.75rem 1rem;;
+  text-decoration: none;
+  font-size: 0.7rem;
+  font-family: 'Julius Sans One', sans-serif;
+  font-weight: 700;
+  display: block;
+}
+
+.topnav a.icon {
+  background: rgba(247, 0, 0, 0);
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.topnav a:hover {
+  background-color: rgba(124, 124, 124, 0.2);
+  color: #333;
+}
+
+.active {
+  background-color: rgba(76, 175, 80, 0);
+  color: white;
+  height: 2.5rem;
+}
+/* END NAVBAR*/
+
 .wrapper {
-  padding-top: 4rem;
+  padding-top: 3rem;
   width: 90%;
   margin: 0 auto;
   text-align: center;
+  
 }
 
 .quote {
   font-family: 'Julius Sans One', sans-serif;
-  font-size: 2.5rem; 
+  font-size: 1.5rem; 
+  font-weight: 900;
+  text-align: justify;
 }
 
 .author {
   font-family: 'Crimson Text', serif;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-style: italic;
+  position: absolute;
+  bottom: 50%;
+  left: 20%;
+}
+
+.border {
+  border-bottom: 1px solid #535252;
+  width: 12.5rem;
+}
+
+@media (min-width: 425px) {
+  .author {
+    left: 26%;
+  }
+}
+
+@media (min-width: 768px) {
+  .author {
+    left: 36%;
+    font-size: 1.2rem;
+  }
+  .wrapper {
+    padding-top: 8rem;
+  }
+}
+
+  @media (min-width: 1024px) {
+  .author {
+    font-size: 1.5rem;
+  }
+  .border {
+    width: 17rem;
+  }
+  .wrapper {
+    padding-top: 10rem;
+  }
+}
+
+  @media (min-width: 1440px) {
+  .author {
+    left: 37%;
+    font-size: 1.8rem;
+  }
+  .border {
+    width: 20rem;
+  }
+  .wrapper {
+    padding-top: 13rem;
+  }
+
+    .quote {
+       font-size: 2.3rem;
+    }
+}
+
+  @media (min-width: 1920px) {
+  .author {
+    left: 36%;
+    font-size: 2.5rem;
+  }
+  .border {
+    width: 28rem;
+  }
+  .wrapper {
+    padding-top: 11rem;
+  }
+  .quote {
+    font-size: 3rem;
+  }
 }
